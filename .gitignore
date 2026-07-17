@@ -1,18 +1,23 @@
 # Visual Studio Code
 .vscode/
 
+# Dependencias (si algún día usas Node.js)
+node_modules/
+
 # Archivos comprimidos
 *.zip
 *.rar
 *.7z
 
+# Logs
+*.log
+
 # Archivos temporales
 *.tmp
-*.log
 
 # Windows
 Thumbs.db
 Desktop.ini
 
 # macOS
-.DS_Store
+.DS_Storegit add .gitignore
