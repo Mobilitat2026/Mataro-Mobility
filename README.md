@@ -1,125 +1,213 @@
-# Mataró Mobility
 # 🚦 Mataró-Mobility
+
+![Estado](https://img.shields.io/badge/Estado-En%20desarrollo-green)
+
+![HTML5](https://img.shields.io/badge/HTML5-orange?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-blue?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript&logoColor=black)
+![GitHub](https://img.shields.io/badge/GitHub-Repositorio-black?logo=github)
 
 ![Mataró-Mobility](images/screenshot.png)
 
-Aplicación web para la gestión y consulta de información relacionada con la movilidad urbana de Mataró.
-
-## 📋 Descripción
-
-Mataró-Mobility centraliza información sobre movilidad en una única aplicación, facilitando la consulta de:
-
-- 🚗 Aparcamientos
-- 🚕 Paradas de taxi
-- 🚲 Aparcamientos de bicicletas
-- 🏍️ Aparcamientos de motos
-- ♿ Plazas PMR
-- 🚧 Incidencias de tráfico
-- 🚦 Estado del tránsito
-- 📍 Servicios municipales relacionados con la movilidad
+> **Estado del proyecto:** 🟢 En desarrollo activo
+>
+> Aplicación web para la gestión, consulta y visualización de información relacionada con la movilidad urbana del municipio de Mataró mediante un mapa interactivo.
 
 ---
 
-## ✨ Funcionalidades
+## 📑 Índice
 
-- Mapa interactivo.
-- Marcadores personalizados.
-- Gestión de incidencias.
-- Consulta de servicios.
-- Datos almacenados en formato JSON.
-- Interfaz responsive.
-- Iconografía personalizada.
-
----
-
-## 🛠 Tecnologías
-
-- HTML5
-- CSS3
-- JavaScript (ES6)
-- JSON
-- Git
-- GitHub
+- [📋 Descripción](#-descripción)
+- [⭐ Características principales](#-características-principales)
+- [✨ Funcionalidades](#-funcionalidades)
+- [🛠 Tecnologías utilizadas](#-tecnologías-utilizadas)
+- [📂 Estructura del proyecto](#-estructura-del-proyecto)
+- [📚 Documentación](#-documentación)
+- [📸 Capturas de pantalla](#-capturas-de-pantalla)
+- [🚀 Inicio rápido](#-inicio-rápido)
+- [🚧 Estado del proyecto](#-estado-del-proyecto)
+- [👨‍💻 Autor](#-autor)
+- [📄 Licencia](#-licencia)
 
 ---
 
-## 📁 Estructura del proyecto
+# 📋 Descripción
 
-```
+**Mataró-Mobility** es una aplicación web desarrollada para centralizar la información relacionada con la movilidad urbana del municipio de Mataró.
+
+Su objetivo es ofrecer una herramienta sencilla, visual e intuitiva que permita consultar sobre un mapa interactivo los principales servicios de movilidad, incidencias y recursos municipales, facilitando la gestión y la toma de decisiones.
+
+La aplicación está diseñada para ser modular, fácilmente ampliable y basada en datos almacenados en formato JSON.
+
+---
+
+# ⭐ Características principales
+
+- 🗺️ Mapa interactivo.
+- 🚧 Gestión de incidencias.
+- 🚗 Consulta de aparcamientos.
+- 🚕 Información sobre paradas de taxi.
+- 🚲 Aparcamientos para bicicletas.
+- 🏍️ Aparcamientos para motocicletas.
+- ♿ Plazas de movilidad reducida (PMR).
+- 📍 Marcadores personalizados.
+- 📄 Datos en formato JSON.
+- 📱 Diseño adaptable (Responsive).
+
+---
+
+# ✨ Funcionalidades
+
+| Funcionalidad | Estado |
+|---------------|:------:|
+| 🗺️ Mapa interactivo | ✅ |
+| 📍 Marcadores personalizados | ✅ |
+| 🚗 Aparcamientos | ✅ |
+| 🚕 Paradas de taxi | ✅ |
+| 🚲 Aparcamientos para bicicletas | ✅ |
+| 🏍️ Aparcamientos para motocicletas | ✅ |
+| ♿ Plazas PMR | ✅ |
+| 🚧 Gestión de incidencias | ✅ |
+| 📄 Datos JSON | ✅ |
+| 📱 Diseño responsive | ✅ |
+| 🎨 Iconografía personalizada | ✅ |
+
+---
+
+# 🛠 Tecnologías utilizadas
+
+| Tecnología | Descripción |
+|------------|-------------|
+| HTML5 | Estructura de la aplicación |
+| CSS3 | Diseño y estilos |
+| JavaScript (ES6) | Lógica de la aplicación |
+| JSON | Almacenamiento de datos |
+| Git | Control de versiones |
+| GitHub | Repositorio y colaboración |
+| Visual Studio Code | Entorno de desarrollo |
+
+---
+
+# 📂 Estructura del proyecto
+
+```text
 Mataro-Mobility
 │
 ├── assets
 │   ├── css
+│   │   └── style.css
+│   │
 │   ├── data
+│   │   ├── incidencias.json
+│   │   └── services.json
+│   │
 │   └── js
+│       ├── app.js
+│       ├── incidents.js
+│       ├── incidentsUI.js
+│       ├── maps.js
+│       ├── providers.js
+│       ├── services.js
+│       ├── storage.js
+│       └── ui.js
 │
 ├── docs
+│   ├── CHANGELOG.md
+│   ├── DECISIONS.md
+│   ├── MANUAL_TECNIC.md
+│   ├── MANUAL_USUARI.md
+│   ├── PROJECT_STATE.md
+│   └── TODO.md
 │
 ├── icons
 │
 ├── images
+│   ├── LOGO.png
+│   └── screenshot.png
 │
+├── .gitignore
 ├── index.html
 └── README.md
 ```
 
 ---
 
-## 📚 Documentación
+# 📚 Documentación
 
-La documentación técnica se encuentra en la carpeta **docs**.
+La documentación del proyecto se encuentra en la carpeta **docs**.
 
-- Manual de Usuario
-- Manual Técnico
-- Estado del Proyecto
-- Decisiones de Diseño
-- Changelog
-- TODO
+| Documento | Descripción |
+|-----------|-------------|
+| 📖 [Manual de Usuario](docs/MANUAL_USUARI.md) | Guía de utilización de la aplicación |
+| 🔧 [Manual Técnico](docs/MANUAL_TECNIC.md) | Arquitectura y funcionamiento interno |
+| 📋 [Estado del Proyecto](docs/PROJECT_STATE.md) | Situación actual del desarrollo |
+| 📝 [Registro de Cambios](docs/CHANGELOG.md) | Historial de modificaciones |
+| 💡 [Decisiones de Diseño](docs/DECISIONS.md) | Criterios técnicos adoptados |
+| ✅ [Lista de tareas](docs/TODO.md) | Mejoras previstas y tareas pendientes |
 
 ---
 
-## 🚀 Ejecución
+# 📸 Capturas de pantalla
 
-Clonar el repositorio:
+### Pantalla principal
+
+La aplicación presenta toda la información sobre un mapa interactivo.
+
+![Pantalla principal](images/screenshot.png)
+
+---
+
+# 🚀 Inicio rápido
+
+## Requisitos
+
+- Navegador web moderno.
+- Visual Studio Code (recomendado).
+
+## Clonar el repositorio
 
 ```bash
 git clone https://github.com/Mobilitat2026/Mataro-Mobility.git
 ```
 
-Entrar en la carpeta:
+## Abrir el proyecto
 
 ```bash
 cd Mataro-Mobility
 ```
 
-Abrir:
+## Ejecutar
 
-```
-index.html
-```
+Se recomienda utilizar la extensión **Live Server** de Visual Studio Code.
 
-o utilizar la extensión **Live Server** de Visual Studio Code.
+Una vez instalada:
 
----
+1. Abrir la carpeta del proyecto.
+2. Hacer clic derecho sobre `index.html`.
+3. Seleccionar **Open with Live Server**.
 
-## 🌐 Repositorio
-
-https://github.com/Mobilitat2026/Mataro-Mobility
+La aplicación se abrirá automáticamente en el navegador.
 
 ---
 
-## 📌 Estado del proyecto
+# 🚧 Estado del proyecto
 
-🟢 En desarrollo.
+El proyecto se encuentra actualmente en fase de desarrollo activo.
 
----
-
-## 👨‍💻 Autor
-
-Mobilitat2026
+Las funcionalidades principales están implementadas y el desarrollo continúa incorporando nuevas mejoras relacionadas con la movilidad urbana, la gestión de incidencias y la integración de nuevos servicios.
 
 ---
 
-## 📄 Licencia
+# 👨‍💻 Autor
 
-Pendiente de definir.
+**Mobilitat2026**
+
+Proyecto desarrollado como plataforma para la gestión y consulta de la movilidad urbana de Mataró.
+
+---
+
+# 📄 Licencia
+
+Actualmente este proyecto **no dispone de una licencia pública**.
+
+Todos los derechos reservados © Mobilitat2026.
