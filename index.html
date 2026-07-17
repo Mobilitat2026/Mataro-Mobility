@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mataró Mobility</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Leaflet -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet/dist/leaflet.css">
+
+    <!-- Fuente Inter -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<div id="app">
+
+    <!-- Modal nueva incidencia -->
+<div id="incidencia-panel" class="modal hidden">
+
+    <div class="modal-content">
+
+        <button 
+            id="cerrarModalIncidencia"
+            class="modal-close">
+            ✕
+        </button>
+
+
+        <h2>Nueva incidencia</h2>
+
+
+        <input
+            id="tituloIncidencia"
+            type="text"
+            placeholder="Título de la incidencia">
+
+
+        <textarea
+            id="descripcionIncidencia"
+            placeholder="Descripción de la incidencia"></textarea>
+
+
+        <select id="tipoIncidencia">
+
+            <option value="obras">
+                🚧 Obras
+            </option>
+
+            <option value="accidente">
+                🚨 Accidente
+            </option>
+
+            <option value="atasco">
+                🚦 Atasco
+            </option>
+
+            <option value="otros">
+                📍 Otros
+            </option>
+
+        </select>
+
+
+        <div class="modal-actions">
+
+            <button id="cancelarIncidencia">
+                Cancelar
+            </button>
+
+
+            <button id="guardarIncidencia">
+                Guardar
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+    <!-- Cabecera -->
+    <header class="header">
+
+        <img
+            src="images/logo.png"
+            class="logo"
+            alt="Ajuntament de Mataró">
+
+        <div>
+
+            <h1>Mataró Mobility</h1>
+
+            <p>Ajuntament de Mataró · Mobilitat</p>
+
+        </div>
+
+    </header>
+
+    <!-- Mapa -->
+    <main id="map"></main>
+
+    <!-- Botón flotante -->
+    <button
+        id="btnNuevaIncidencia"
+        class="floating-button">
+        +
+    </button>
+
+    <!-- Panel de servicios -->
+    <aside id="services-panel">
+
+        <div class="services-header">
+
+            <h2>Servicios</h2>
+
+            <button id="close-services">
+                <i data-lucide="x"></i>
+            </button>
+
+        </div>
+
+        <div id="services-content"></div>
+
+    </aside>
+
+    <!-- Navegación inferior -->
+    <nav class="bottom-nav">
+
+        <button data-action="home">
+            <i data-lucide="home"></i>
+            <span>Inicio</span>
+        </button>
+
+        <button data-action="search">
+            <i data-lucide="search"></i>
+            <span>Buscar</span>
+        </button>
+
+        <button data-action="location">
+            <i data-lucide="locate"></i>
+            <span>Ubicación</span>
+        </button>
+
+        <button data-action="favorites">
+            <i data-lucide="star"></i>
+            <span>Favoritos</span>
+        </button>
+
+        <button data-action="services">
+            <i data-lucide="menu"></i>
+            <span>Servicios</span>
+        </button>
+
+    </nav>
+
+</div>
+
+<!-- Leaflet -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Lucide -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Inicializar iconos -->
+<script>
+    lucide.createIcons();
+</script>
+
+<!-- Aplicación -->
+<script type="module" src="assets/js/app.js"></script>
+
+</body>
+</html>

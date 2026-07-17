@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "tipo": "accidente",
+    "titulo": "Accidente N-II",
+    "descripcion": "Colisión entre dos vehículos.",
+    "lat": 41.54126,
+    "lng": 2.45705
+  },
+  {
+    "id": 2,
+    "tipo": "obras",
+    "titulo": "Obras Via Europa",
+    "descripcion": "Carril derecho cortado.",
+    "lat": 41.541136,
+    "lng": 2.4351936
+  },
+  {
+    "id": 3,
+    "tipo": "atasco",
+    "titulo": "Retenciones Ronda Barceló",
+    "descripcion": "Tráfico lento.",
+    "lat": 41.5341,
+    "lng": 2.440567
+  }
+]

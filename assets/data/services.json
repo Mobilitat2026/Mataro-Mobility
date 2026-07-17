@@ -1,0 +1,28 @@
+{
+    "services":[
+
+        {
+            "id":"cid",
+            "name":"CID",
+            "category":"mobilitat",
+            "icon":"map-pin"
+        },
+
+
+        {
+            "id":"pmr",
+            "name":"PMR",
+            "category":"mobilitat",
+            "icon":"accessibility"
+        },
+
+
+        {
+            "id":"bicicletes",
+            "name":"Bicicletes",
+            "category":"mobilitat",
+            "icon":"bike"
+        }
+
+    ]
+}
