@@ -58,32 +58,77 @@ body {
 /* HEADER */
 
 
-.header {
+/* ===========================
+   HEADER
+=========================== */
 
-    height:110px;
+.header{
 
     display:flex;
-
     align-items:center;
+    gap:18px;
 
-    padding:15px 20px;
+    padding:12px 20px;
 
     background:white;
 
     z-index:1000;
 
+    border-bottom:1px solid #e5e7eb;
+}
+
+.logo{
+
+    width:90px;
+
+    height:auto;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+}
+
+.header-text{
+
+    flex:1;
+
+    min-width:0;
+}
+
+.header-text h1{
+
+    margin:0;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    color:var(--text);
+
+    line-height:1.1;
+}
+
+.header-text p{
+
+    margin:6px 0 0;
+
+    color:var(--gray);
+
+    font-size:.95rem;
+
+    line-height:1.2;
 }
 
 
 
 .logo {
 
-    width:200px;
+    width:120px;
     height:auto;
 
     object-fit:contain;
 
-    margin-right:18px;
+    margin-right:0px;
 
 }
 
@@ -115,12 +160,14 @@ body {
 /* BOTTOM NAV */
 
 
-.bottom-nav {
 
+/*==================================================
+  NAVEGACIÓN INFERIOR
+==================================================*/
 
-    height:70px;
+.bottom-nav{
 
-    background:white;
+    height:72px;
 
     display:flex;
 
@@ -128,18 +175,25 @@ body {
 
     align-items:center;
 
-    border-top:
-        1px solid #ddd;
+    background:rgba(255,255,255,.98);
 
+    border-top:1px solid var(--border);
+
+    box-shadow:0 -3px 12px rgba(0,0,0,.06);
+
+    backdrop-filter:blur(10px);
+
+    z-index:1000;
 
 }
 
+.bottom-nav button{
 
+    flex:1;
 
-.bottom-nav button {
+    height:100%;
 
-
-    border:0;
+    border:none;
 
     background:none;
 
@@ -147,29 +201,35 @@ body {
 
     flex-direction:column;
 
+    justify-content:center;
+
     align-items:center;
 
-    gap:5px;
+    gap:4px;
 
     color:var(--gray);
 
-    transition:
-        var(--transition);
+    cursor:pointer;
 
+    transition:var(--transition);
 
 }
 
-
-
-.bottom-nav button:hover {
+.bottom-nav button:hover{
 
     color:var(--primary);
 
+    background:rgba(0,94,184,.05);
+
 }
 
+.bottom-nav button:active{
 
+    transform:scale(.96);
 
-.bottom-nav svg {
+}
+
+.bottom-nav svg{
 
     width:22px;
 
@@ -177,13 +237,14 @@ body {
 
 }
 
+.bottom-nav span{
 
+    font-size:.72rem;
 
-.bottom-nav span {
-
-    font-size:11px;
+    font-weight:500;
 
 }
+
 /* PANEL SERVICIOS */
 
 
@@ -351,45 +412,54 @@ body {
 
 
 }
-/* BOTÓN NUEVA INCIDENCIA */
+
+/*==================================================
+  BOTÓN FLOTANTE
+==================================================*/
 
 .floating-button{
 
     position:absolute;
 
-    right:20px;
+    right:22px;
 
-    bottom:95px;
+    bottom:88px;
 
-    width:60px;
+    width:62px;
 
-    height:60px;
+    height:62px;
 
     border:none;
 
     border-radius:50%;
 
-    background:#0d6efd;
+    background:var(--primary);
 
     color:white;
 
-    font-size:34px;
+    font-size:2rem;
 
-    font-weight:bold;
+    font-weight:600;
 
     cursor:pointer;
 
-    z-index:9999;
+    box-shadow:var(--shadow);
 
-    box-shadow:0 4px 15px rgba(0,0,0,.3);
+    transition:var(--transition);
 
-    transition:0.25s;
+    z-index:1500;
 
 }
 
 .floating-button:hover{
 
-    transform:scale(1.08);
+    transform:translateY(-2px);
+
+}
+
+.floating-button:active{
+
+    transform:scale(.95);
 
 }
 #incidencia-panel {
@@ -738,5 +808,99 @@ body {
     z-index:1000;
 
     font-weight:600;
+
+}
+/*==================================================
+  RESPONSIVE
+==================================================*/
+
+@media (max-width:1024px){
+
+    .logo{
+
+        width:75px;
+
+    }
+
+    .header-text h1{
+
+        font-size:1.8rem;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .header{
+
+        padding:10px 15px;
+
+        gap:12px;
+
+    }
+
+    .logo{
+
+        width:60px;
+
+    }
+
+    .header-text h1{
+
+        font-size:1.4rem;
+
+    }
+
+    .header-text p{
+
+        font-size:.8rem;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .logo{
+
+        width:50px;
+
+    }
+
+    .header-text h1{
+
+        font-size:1.15rem;
+
+    }
+
+    .header-text p{
+
+        display:none;
+
+    }
+
+}
+.bottom-nav{
+
+    height:68px;
+
+}
+
+.bottom-nav span{
+
+    font-size:.68rem;
+
+}
+
+.floating-button{
+
+    width:56px;
+
+    height:56px;
+
+    right:16px;
+
+    bottom:82px;
 
 }
