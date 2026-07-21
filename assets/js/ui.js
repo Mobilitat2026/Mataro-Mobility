@@ -88,9 +88,5 @@ export function closeServices(){
         .querySelector("#google-map-frame")
         .src = "";
 
-    // Mostrar la barra inferior
-    document
-        .querySelector(".bottom-nav")
-        .style.display = "flex";
-
+    
 }

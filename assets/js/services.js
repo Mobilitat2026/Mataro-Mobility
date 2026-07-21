@@ -167,23 +167,26 @@ function abrirMapaServicio(servicio){
         .querySelector("#map")
         .style.display = "none";
 
-
     // Mostrar el visor
     document
         .querySelector("#map-viewer")
         .classList
         .remove("hidden");
 
-
     // Cargar Google My Maps
     document
         .querySelector("#google-map-frame")
         .src = servicio.mapUrl;
 
+  
+    // En móviles cerrar automáticamente el panel
+    if (window.innerWidth <= 768) {
 
-    // Ocultar la barra inferior
-    document
-        .querySelector(".bottom-nav")
-        .style.display = "none";
+        document
+            .querySelector("#services-panel")
+            .classList
+            .remove("open");
+
+    }
 
 }
