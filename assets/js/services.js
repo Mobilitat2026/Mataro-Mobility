@@ -26,7 +26,7 @@ export async function initServices(){
     ];
 
 
-    renderServices();
+    renderServices(data.services);
 
 }
 
@@ -35,7 +35,7 @@ export async function initServices(){
 /**
  * Genera el panel lateral
  */
-function renderServices(){
+function renderServices(services){
 
 
     const container =
@@ -55,7 +55,6 @@ function renderServices(){
     servicesData.forEach(category => {
 
 
-
         const section =
             document.createElement(
                 "section"
@@ -73,13 +72,14 @@ function renderServices(){
                 ${category.name}
             </h3>
 
+
             <div class="service-list">
 
             ${
                 category.services
                 .map(service => `
 
-                    <button 
+                    <button
                         class="service-item"
                         data-service="${service.id}"
                     >
@@ -104,10 +104,86 @@ function renderServices(){
         container.appendChild(section);
 
 
-
     });
 
 
+
     lucide.createIcons();
+
+
+
+    activarServicios(services);
+
+}
+
+
+
+/**
+ * Activa los botones
+ */
+function activarServicios(services){
+
+
+    document
+    .querySelectorAll(".service-item")
+    .forEach(button => {
+
+
+        button.addEventListener(
+            "click",
+            () => {
+
+
+                const id =
+                    button.dataset.service;
+
+
+                const servicio =
+                    services.find(
+                        s => s.id === id
+                    );
+
+
+                abrirMapaServicio(servicio);
+
+
+            }
+        );
+
+
+    });
+
+}
+
+
+
+/**
+ * Muestra el mapa Google
+ */
+function abrirMapaServicio(servicio){
+
+    // Ocultar el mapa Leaflet
+    document
+        .querySelector("#map")
+        .style.display = "none";
+
+
+    // Mostrar el visor
+    document
+        .querySelector("#map-viewer")
+        .classList
+        .remove("hidden");
+
+
+    // Cargar Google My Maps
+    document
+        .querySelector("#google-map-frame")
+        .src = servicio.mapUrl;
+
+
+    // Ocultar la barra inferior
+    document
+        .querySelector(".bottom-nav")
+        .style.display = "none";
 
 }

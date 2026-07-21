@@ -47,7 +47,7 @@ export function initUI(){
 
 
 
-function openServices(){
+export function openServices(){
 
 
     document
@@ -64,17 +64,33 @@ function openServices(){
 
 
 
-function closeServices(){
+export function closeServices(){
 
-
+    // Cerrar el panel lateral
     document
-    .querySelector(
-        "#services-panel"
-    )
-    .classList
-    .remove(
-        "open"
-    );
+        .querySelector("#services-panel")
+        .classList
+        .remove("open");
 
+    // Ocultar el visor Google Maps
+    document
+        .querySelector("#map-viewer")
+        .classList
+        .add("hidden");
+
+    // Volver al mapa Leaflet
+    document
+        .querySelector("#map")
+        .style.display = "block";
+
+    // Limpiar el iframe
+    document
+        .querySelector("#google-map-frame")
+        .src = "";
+
+    // Mostrar la barra inferior
+    document
+        .querySelector(".bottom-nav")
+        .style.display = "flex";
 
 }

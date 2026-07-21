@@ -1,28 +1,25 @@
 {
-    "services":[
-
-        {
-            "id":"cid",
-            "name":"CID",
-            "category":"mobilitat",
-            "icon":"map-pin"
-        },
-
-
-        {
-            "id":"pmr",
-            "name":"PMR",
-            "category":"mobilitat",
-            "icon":"accessibility"
-        },
-
-
-        {
-            "id":"bicicletes",
-            "name":"Bicicletes",
-            "category":"mobilitat",
-            "icon":"bike"
-        }
-
-    ]
+  "services": [
+    {
+      "id": "cid",
+      "name": "CID",
+      "category": "mobilitat",
+      "icon": "map-pin",
+      "mapUrl": "https://www.google.com/maps/d/embed?mid=1zM4rmC4JQNQYcpBAhQf-LLn-_XoujPA"
+    },
+    {
+      "id": "pmr",
+      "name": "PMR",
+      "category": "mobilitat",
+      "icon": "accessibility",
+      "mapUrl": "https://www.google.com/maps/d/embed?mid=1yolGyjCoHmvDaRt9FC7hXyrva37xZjY&z=15"
+    },
+    {
+      "id": "bicicletes",
+      "name": "Bicicletes",
+      "category": "mobilitat",
+      "icon": "bike",
+      "mapUrl": "https://www.google.com/maps/d/embed?mid=1S08OPkj1OmXBA6SqzqYtsIcArnL3RUw&z=15"
+    }
+  ]
 }
