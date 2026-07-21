@@ -1,4 +1,11 @@
 # TODO
 
-- [ ] Mòdul incidències
-- [ ] Icons SVG
+# Sprint UI v1
+
+- [ ] Header
+- [ ] Navigation
+- [ ] Services
+- [ ] FAB
+- [ ] Responsive
+- [ ] Animaciones
+- [ ] Dark Mode preparado
