@@ -1,0 +1,16 @@
+/* ==========================================================
+   MATARÓ MOBILITY
+   Archivo principal de estilos
+========================================================== */
+
+@import url("./variables.css");
+@import url("./base.css");
+@import url("./header.css");
+@import url("./map.css");
+@import url("./sidebar.css");
+@import url("./modal.css");
+@import url("./buttons.css");
+@import url("./bottom-nav.css");
+@import url("./cards.css");
+@import url("./animations.css");
+@import url("./responsive.css");

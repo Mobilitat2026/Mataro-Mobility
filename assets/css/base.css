@@ -1,0 +1,48 @@
+/* ==========================================================
+   BASE
+========================================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html,
+body{
+
+    height:100%;
+
+}
+
+body{
+
+    font-family:Inter,sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+}
+
+button{
+
+    font-family:inherit;
+
+}
+
+#app{
+
+    position:relative;
+
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
