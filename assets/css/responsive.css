@@ -1,16 +1,24 @@
 /* ==========================================================
-   MATARÓ MOBILITY
-   Archivo principal de estilos
+   MÓVILES
 ========================================================== */
 
-@import url("./variables.css");
-@import url("./base.css");
-@import url("./header.css");
-@import url("./map.css");
-@import url("./sidebar.css");
-@import url("./modal.css");
-@import url("./buttons.css");
-@import url("./bottom-nav.css");
-@import url("./cards.css");
-@import url("./animations.css");
-@import url("./responsive.css");
+@media (max-width:768px){
+
+    .logo{
+        width:110px;
+    }
+
+    .header{
+        padding:10px 16px;
+        gap:14px;
+    }
+
+    .header-text h1{
+        font-size:1.7rem;
+    }
+
+    .header-text p{
+        font-size:.90rem;
+    }
+
+}

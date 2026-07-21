@@ -1,0 +1,51 @@
+/*==================================================
+  BOTÓN FLOTANTE
+==================================================*/
+
+.floating-button{
+
+    position:absolute;
+
+    right:22px;
+
+    bottom:88px;
+
+    width:62px;
+
+    height:62px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:2rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    z-index:1500;
+
+}
+
+
+.floating-button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+.floating-button:active{
+
+    transform:scale(.95);
+
+}

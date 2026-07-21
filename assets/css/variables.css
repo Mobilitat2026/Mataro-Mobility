@@ -5,23 +5,20 @@
 :root{
 
     --primary:#005EB8;
-
     --background:#ffffff;
-
     --surface:#f5f6f8;
-
     --text:#1f2937;
-
     --gray:#6b7280;
-
     --border:#e5e7eb;
 
     --transition:200ms ease;
 
     --radius:16px;
-
     --shadow:0 4px 12px rgba(0,0,0,.08);
 
+    /* Header */
     --header-height:80px;
+    --header-background:#ffffff;
+    --header-border:#e5e7eb;
 
 }
