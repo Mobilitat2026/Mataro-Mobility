@@ -108,19 +108,24 @@
 
     </header>
 
- <!-- Mapa -->
-<main id="map"></main>
+<!-- Contenedor de mapas -->
+<main id="map-container">
 
-<!-- Visor Google My Maps -->
-<div id="map-viewer" class="hidden">
+    <!-- Mapa Leaflet -->
+    <div id="map"></div>
 
-    <iframe
-        id="google-map-frame"
-        src=""
-        loading="lazy">
-    </iframe>
+    <!-- Visor Google My Maps -->
+    <div id="map-viewer" class="hidden">
 
-</div>
+        <iframe
+            id="google-map-frame"
+            src=""
+            loading="lazy">
+        </iframe>
+
+    </div>
+
+</main>
 
 <!-- Botón flotante -->
 <button

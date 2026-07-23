@@ -5,16 +5,21 @@
 .header{
 
     display:flex;
+
     align-items:center;
+
     gap:24px;
 
     padding:14px 24px;
 
-    background:var(--header-background)
+    background:var(--header-background);
 
     z-index:1000;
 
-   border-bottom:1px solid var(--header-border);
+    border-bottom:1px solid var(--header-border);
+
+    flex-shrink:0;
+
 }
 
 .logo{

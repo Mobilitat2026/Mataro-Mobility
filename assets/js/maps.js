@@ -100,12 +100,35 @@ function ocultarAvisoMapa(){
 
 
 
-// MAPA
+// ==========================================================
+// INICIALIZAR MAPA
+// ==========================================================
 
 export function initMap() {
 
 
-    const map = L.map("map").setView(
+    const contenedor = document.getElementById("map");
+
+
+    console.log(
+        "MAP CONTAINER:",
+        contenedor
+    );
+
+
+    console.log(
+        "ALTURA MAP:",
+        contenedor.offsetHeight
+    );
+
+
+    const map = L.map("map", {
+
+        zoomControl: true,
+
+        attributionControl: true
+
+    }).setView(
 
         [41.5381, 2.4447],
 
@@ -114,14 +137,13 @@ export function initMap() {
     );
 
 
-
     L.tileLayer(
 
         "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
 
         {
 
-            attribution:"OpenStreetMap"
+            attribution: "OpenStreetMap"
 
         }
 
@@ -129,11 +151,34 @@ export function initMap() {
 
 
 
+    // Ajustar tamaño después del render inicial
+
+    setTimeout(() => {
+
+        map.invalidateSize();
+
+    }, 300);
+
+
+
+    // Ajustar tamaño al cambiar ventana/orientación
+
+    window.addEventListener(
+
+        "resize",
+
+        () => {
+
+            map.invalidateSize();
+
+        }
+
+    );
+
+
     return map;
 
 }
-
-
 
 // ACTIVAR NUEVA INCIDENCIA
 
