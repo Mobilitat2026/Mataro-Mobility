@@ -697,17 +697,11 @@ export function obtenerUbicacionUsuario(){
             );
 
 
-            map.setView(
-
-                [
-                    lat,
-                    lng
-                ],
-
-                16
-
-            );
-
+            console.log(
+                "Moviendo mapa a:",
+                lat,
+                lng
+            );  
 
 
             // eliminar marcador anterior
