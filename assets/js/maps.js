@@ -691,12 +691,10 @@ export function obtenerUbicacionUsuario(){
 
 
 
-            console.log(
-                "Ubicación:",
-                lat,
-                lng
+            alert(
+                "Lat: " + lat + 
+                "\nLng: " + lng
             );
-
 
 
             map.setView(
