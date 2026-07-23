@@ -73,3 +73,20 @@ Todas las funcionalidades principales siguen operativas.
 
 Solo queda finalizar la nueva versión del popup antes de continuar con mejoras de interfaz.
 
+## Estado actual
+
+### Finalizado
+
+- Mapa Leaflet operativo.
+- Gestión de incidencias.
+- Almacenamiento LocalStorage.
+- Panel de Servicios.
+- Integración con Google My Maps.
+- Carga dinámica de servicios desde JSON.
+
+### Próximo Sprint
+
+- Refactor del visor de mapas.
+- Optimización móvil.
+- Mejoras visuales.
+- Nuevos servicios municipales.

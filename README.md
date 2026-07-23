@@ -211,3 +211,24 @@ Proyecto desarrollado como plataforma para la gestión y consulta de la movilida
 Actualmente este proyecto **no dispone de una licencia pública**.
 
 Todos los derechos reservados © Mobilitat2026.
+
+## Servicios Municipales
+
+Mataró Mobility permite visualizar mapas oficiales de Google My Maps directamente desde la aplicación.
+
+Actualmente incorpora:
+
+- CID
+- PMR
+- Bicicletes
+
+La configuración se realiza desde:
+
+assets/data/services.json
+
+Cada servicio dispone de:
+
+- nombre
+- icono
+- categoría
+- URL del mapa

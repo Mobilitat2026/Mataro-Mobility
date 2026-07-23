@@ -178,7 +178,6 @@ function abrirMapaServicio(servicio){
         .querySelector("#google-map-frame")
         .src = servicio.mapUrl;
 
-  
     // En móviles cerrar automáticamente el panel
     if (window.innerWidth <= 768) {
 

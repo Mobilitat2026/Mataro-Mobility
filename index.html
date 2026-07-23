@@ -108,50 +108,43 @@
 
     </header>
 
-    <!-- Mapa -->
-    <main id="map"></main>
+ <!-- Mapa -->
+<main id="map"></main>
 
-    
-    
-    
-    <div id="map-viewer" class="hidden">
+<!-- Visor Google My Maps -->
+<div id="map-viewer" class="hidden">
 
-         <iframe
-            id="google-map-frame"
-            src=""
-            loading="lazy">
-        </iframe>
+    <iframe
+        id="google-map-frame"
+        src=""
+        loading="lazy">
+    </iframe>
+
+</div>
+
+<!-- Botón flotante -->
+<button
+    id="btnNuevaIncidencia"
+    class="floating-button">
+    +
+</button>
+
+<!-- Panel de servicios -->
+<aside id="services-panel">
+
+    <div class="services-header">
+
+        <h2>Servicios</h2>
+
+        <button id="close-services">
+            <i data-lucide="x"></i>
+        </button>
 
     </div>
 
+    <div id="services-content"></div>
 
-
-
-    <!-- Botón flotante -->
-    <button
-        id="btnNuevaIncidencia"
-        class="floating-button">
-        +
-    </button>
-
-    <!-- Panel de servicios -->
-    <aside id="services-panel">
-
-        <div class="services-header">
-
-            <h2>Servicios</h2>
-
-            <button id="close-services">
-                <i data-lucide="x"></i>
-            </button>
-
-        </div>
-
-
-        <div id="services-content"></div>
-
-    </aside>
-
+</aside>
 
 
     <!-- Navegación inferior -->

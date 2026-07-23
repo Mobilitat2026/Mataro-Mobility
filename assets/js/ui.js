@@ -66,27 +66,22 @@ export function openServices(){
 
 export function closeServices(){
 
-    // Cerrar el panel lateral
     document
         .querySelector("#services-panel")
         .classList
         .remove("open");
 
-    // Ocultar el visor Google Maps
     document
         .querySelector("#map-viewer")
         .classList
         .add("hidden");
 
-    // Volver al mapa Leaflet
     document
         .querySelector("#map")
         .style.display = "block";
 
-    // Limpiar el iframe
     document
         .querySelector("#google-map-frame")
         .src = "";
 
-    
 }
