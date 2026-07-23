@@ -90,3 +90,28 @@ Solo queda finalizar la nueva versión del popup antes de continuar con mejoras 
 - Optimización móvil.
 - Mejoras visuales.
 - Nuevos servicios municipales.
+
+## Estado actual del sistema de mapas
+
+El sistema de mapas ha sido refactorizado para utilizar una arquitectura basada en un único contenedor:
+
+#map-container
+│
+├── #map (Leaflet)
+│
+└── #map-viewer (Google My Maps)
+
+
+Esta modificación permite:
+
+- Compartir el mismo espacio visual entre diferentes proveedores de mapas.
+- Mejorar la compatibilidad con dispositivos móviles.
+- Eliminar problemas de alturas incorrectas en pantallas pequeñas.
+- Facilitar futuras ampliaciones del sistema GIS.
+
+Estado:
+
+✅ Leaflet funcionando  
+✅ Google My Maps preparado  
+✅ Diseño responsive corregido  
+✅ Compatible con escritorio y móvil

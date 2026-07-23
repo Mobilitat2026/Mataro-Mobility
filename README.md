@@ -54,6 +54,18 @@ La aplicación está diseñada para ser modular, fácilmente ampliable y basada 
 - 📄 Datos en formato JSON.
 - 📱 Diseño adaptable (Responsive).
 
+### Sistema de mapas
+
+Mataró Mobility utiliza una arquitectura de mapas basada en un contenedor único que permite gestionar diferentes fuentes cartográficas.
+
+Actualmente soporta:
+
+- Leaflet como mapa principal.
+- Google My Maps como visor complementario.
+
+El diseño está optimizado para escritorio y dispositivos móviles mediante un sistema responsive basado en Flexbox.
+
+
 ---
 
 # ✨ Funcionalidades

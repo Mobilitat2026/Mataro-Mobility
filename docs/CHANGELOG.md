@@ -16,6 +16,14 @@
 - Arquitectura de servicios preparada para añadir nuevos mapas sin modificar JavaScript.
 - Mejor experiencia de navegación entre servicios y mapa principal.
 
-### Pendiente
-- Refactor del visor para reutilizar el contenedor principal del mapa.
-- Optimización responsive.
+
+## Cambios recientes
+
+### Refactor del sistema de mapas
+
+- Creado un contenedor único `#map-container` para gestionar las vistas de mapas.
+- Integrados Leaflet y Google My Maps dentro del mismo sistema de visualización.
+- Eliminadas dependencias de posicionamiento fijo para el área del mapa.
+- Mejorada la adaptación del mapa en dispositivos móviles.
+- Añadido recalculo automático del tamaño de Leaflet mediante `invalidateSize()`.
+- Corregidos problemas de altura del mapa en navegadores móviles.
