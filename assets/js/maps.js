@@ -594,3 +594,194 @@ export function confirmarNuevaIncidencia(map, incidencia){
 
 
 }
+// ==========================================================
+// VOLVER AL MAPA PRINCIPAL
+// ==========================================================
+
+export function volverMapaInicio(){
+
+
+    document
+        .getElementById("map-viewer")
+        .classList
+        .add("hidden");
+
+
+    document
+        .getElementById("map")
+        .style.display = "block";
+
+
+    document
+        .getElementById("google-map-frame")
+        .src = "";
+
+
+    if(window.AppState?.map){
+
+
+        window.AppState.map.setView(
+
+            [41.5381, 2.4447],
+
+            14
+
+        );
+
+
+        window.AppState.map.invalidateSize();
+
+
+    }
+
+
+}
+
+// ==========================================================
+// OBTENER UBICACIÓN DEL USUARIO
+// ==========================================================
+
+let marcadorUsuario = null;
+
+
+export function obtenerUbicacionUsuario(){
+
+
+    const map = window.AppState?.map;
+
+
+    if(!map){
+
+        console.error(
+            "Mapa no disponible"
+        );
+
+        return;
+
+    }
+
+
+
+    if(!navigator.geolocation){
+
+
+        alert(
+            "Este dispositivo no permite obtener la ubicación"
+        );
+
+
+        return;
+
+    }
+
+
+
+    navigator.geolocation.getCurrentPosition(
+
+
+        (pos)=>{
+
+
+            const lat =
+                pos.coords.latitude;
+
+
+            const lng =
+                pos.coords.longitude;
+
+
+
+            console.log(
+                "Ubicación:",
+                lat,
+                lng
+            );
+
+
+
+            map.setView(
+
+                [
+                    lat,
+                    lng
+                ],
+
+                16
+
+            );
+
+
+
+            // eliminar marcador anterior
+
+            if(marcadorUsuario){
+
+
+                map.removeLayer(
+                    marcadorUsuario
+                );
+
+            }
+
+
+
+            marcadorUsuario =
+
+                L.marker(
+
+                    [
+                        lat,
+                        lng
+                    ]
+
+                )
+
+                .addTo(map)
+
+                .bindPopup(
+
+                    `
+                    <strong>📍 Mi ubicación</strong>
+                    <br><br>
+                    Latitud:
+                    ${lat.toFixed(6)}
+                    <br>
+                    Longitud:
+                    ${lng.toFixed(6)}
+                    `
+
+                )
+
+                .openPopup();
+
+
+
+        },
+
+
+        ()=>{
+
+
+            alert(
+                "No se pudo obtener la ubicación"
+            );
+
+
+        },
+
+
+        {
+
+            enableHighAccuracy:true,
+
+            timeout:10000,
+
+            maximumAge:0
+
+        }
+
+
+    );
+
+
+}

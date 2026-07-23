@@ -18,7 +18,7 @@ import {
 } from "./incidents.js";
 
 
-const AppState = {
+window.AppState = {
 
     map: null,
 

@@ -1,3 +1,9 @@
+import {
+    volverMapaInicio,
+    obtenerUbicacionUsuario
+} from "./maps.js";
+
+
 export function initUI(){
 
 
@@ -9,7 +15,9 @@ export function initUI(){
 
 
         button.addEventListener(
+
             "click",
+
             ()=>{
 
 
@@ -18,14 +26,36 @@ export function initUI(){
 
 
 
-                if(action==="services"){
+                switch(action){
 
-                    openServices();
+
+                    case "services":
+
+                        openServices();
+
+                        break;
+
+
+                    case "home":
+
+                        volverMapaInicio();
+
+                        break;
+
+                    case "location":
+
+                        console.log("BOTON UBICACION PULSADO");
+
+                        obtenerUbicacionUsuario();
+
+                        break;
+                    
 
                 }
 
 
             }
+
         );
 
 
@@ -38,8 +68,11 @@ export function initUI(){
         "#close-services"
     )
     .addEventListener(
+
         "click",
+
         closeServices
+
     );
 
 
@@ -66,22 +99,18 @@ export function openServices(){
 
 export function closeServices(){
 
-    document
-        .querySelector("#services-panel")
-        .classList
-        .remove("open");
 
     document
-        .querySelector("#map-viewer")
-        .classList
-        .add("hidden");
+    .querySelector(
+        "#services-panel"
+    )
+    .classList
+    .remove(
+        "open"
+    );
 
-    document
-        .querySelector("#map")
-        .style.display = "block";
 
-    document
-        .querySelector("#google-map-frame")
-        .src = "";
+    volverMapaInicio();
+
 
 }
