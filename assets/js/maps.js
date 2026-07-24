@@ -689,11 +689,13 @@ export function obtenerUbicacionUsuario(){
             const lng =
                 pos.coords.longitude;
 
+
             console.log(
-                 "Ubicación usuario: ",
+                "Ubicación usuario:",
                 lat,
                 lng
-            );  
+            );
+
 
 
             // eliminar marcador anterior
@@ -737,12 +739,21 @@ export function obtenerUbicacionUsuario(){
                 )
 
                 .openPopup();
+
+
+
+            // centrar mapa en usuario
+
             map.setView(
+
                 [
                     lat,
                     lng
                 ],
+
                 17
+
+            );
 
 
         },
