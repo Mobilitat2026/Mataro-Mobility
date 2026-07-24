@@ -689,16 +689,8 @@ export function obtenerUbicacionUsuario(){
             const lng =
                 pos.coords.longitude;
 
-
-
-            alert(
-                "Lat: " + lat + 
-                "\nLng: " + lng
-            );
-
-
             console.log(
-                "Moviendo mapa a:",
+                 "Ubicación usuario: ",
                 lat,
                 lng
             );  
@@ -745,7 +737,12 @@ export function obtenerUbicacionUsuario(){
                 )
 
                 .openPopup();
-
+            map.setView(
+                [
+                    lat,
+                    lng
+                ],
+                17
 
 
         },

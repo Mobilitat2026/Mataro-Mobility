@@ -6,13 +6,13 @@
 
     position:absolute;
 
-    right:22px;
+    right:34px;
 
-    bottom:88px;
+    bottom:104px;
 
-    width:62px;
+    width:60px;
 
-    height:62px;
+    height:60px;
 
     border:none;
 
@@ -20,7 +20,7 @@
 
     background:var(--primary);
 
-    color:white;
+    color:#fff;
 
     font-size:2rem;
 
@@ -28,24 +28,30 @@
 
     cursor:pointer;
 
-    box-shadow:var(--shadow);
+    display:flex;
 
-    transition:var(--transition);
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 8px 24px rgba(0,94,184,.35);
+
+    transition:all .25s ease;
 
     z-index:1500;
 
 }
 
-
 .floating-button:hover{
 
     transform:translateY(-2px);
 
-}
+    box-shadow:0 12px 28px rgba(0,94,184,.40);
 
+}
 
 .floating-button:active{
 
-    transform:scale(.95);
+    transform:scale(.96);
 
 }

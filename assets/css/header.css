@@ -4,27 +4,41 @@
 
 .header{
 
+    position:absolute;
+
+    top:14px;
+
+    left:14px;
+
+    right:14px;
+
+    height:66px;
+
     display:flex;
 
     align-items:center;
 
-    gap:24px;
+    gap:14px;
 
-    padding:14px 24px;
+    padding:10px 16px;
 
-    background:var(--header-background);
+    background:rgba(255,255,255,.90);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-radius:18px;
+
+    box-shadow:0 4px 14px rgba(0,0,0,.12);
 
     z-index:1000;
-
-    border-bottom:1px solid var(--header-border);
-
-    flex-shrink:0;
 
 }
 
 .logo{
 
-    width:120px;
+    width:72px;
 
     height:auto;
 
@@ -45,26 +59,27 @@
 
     margin:0;
 
-    font-size:2rem;
+    font-size:1.55rem;
 
     font-weight:700;
 
     color:var(--text);
 
-    line-height:1.1;
+    line-height:1;
+
 }
 
 .header-text p{
 
-    margin:6px 0 0;
+    margin:4px 0 0;
 
     color:var(--gray);
 
-    font-size:.95rem;
+    font-size:.9rem;
 
     line-height:1.2;
-}
 
+}
 
 
 .header p {
