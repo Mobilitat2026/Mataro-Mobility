@@ -1,3 +1,7 @@
+import {
+    exportarCSV,
+    exportarKML
+} from "./export.js";
 // services.js
 
 let servicesData = [];
@@ -18,12 +22,35 @@ export async function initServices(){
         await response.json();
 
 
-    servicesData = [
-        {
-            name: "Mobilitat",
-            services: data.services
-        }
-    ];
+servicesData = [
+
+    {
+        name: "Mobilitat",
+        services: data.services
+    },
+
+
+    {
+        name: "Herramientas",
+        services: [
+
+            {
+                id: "export-csv",
+                name: "Exportar CSV",
+                icon: "download"
+            },
+
+
+            {
+                id: "export-kml",
+                name: "Google My Maps",
+                icon: "globe"
+            }
+
+        ]
+    }
+
+];
 
 
     renderServices(data.services);
@@ -142,7 +169,22 @@ function activarServicios(services){
                     services.find(
                         s => s.id === id
                     );
+                if(id === "export-csv"){
 
+                   exportarCSV();
+
+                return;
+
+                }
+
+
+                if(id === "export-kml"){
+
+                    exportarKML();
+
+                 return;
+
+        }
 
                 abrirMapaServicio(servicio);
 
